@@ -70,6 +70,8 @@ const showContract = async () => {
     }
 }
 
+//set up UI for travelling
+
 
 document.getElementById("orbit").addEventListener("click", orbitting);
 document.getElementById("dock").addEventListener("click", docking);
