@@ -1,0 +1,32 @@
+body {
+    background-color: rgb(2, 2, 78);
+    padding: 5%;
+}
+
+#dockOrOrbit {
+    border: 3px solid orange;
+    padding: 20px;
+    color: orange;
+    background-color: rgb(255, 166, 0, 0.5);
+    border-radius: 15px;
+    box-sizing: content-box;
+    width: fit-content;
+    display: flexbox;
+}
+
+button {
+    background-color: orange;
+    border-radius: 10px;
+}
+
+#agent {
+    float: right;
+    border: 3px solid orange;
+    padding: 20px;
+    color: orange;
+    background-color: rgb(255, 166, 0, 0.5);
+    border-radius: 15px;
+    box-sizing: content-box;
+    width: fit-content;
+    display: flexbox;
+}

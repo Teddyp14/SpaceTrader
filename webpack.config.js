@@ -2,6 +2,8 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
+
 
 module.exports = {
     entry: './src/index.js',
@@ -16,12 +18,13 @@ module.exports = {
     },
     devtool: 'eval-source-map',
     plugins: [
+        new Dotenv(),
         new ESLintPlugin(),
         new CleanWebpackPlugin({
             verbose: true
         }),
         new HtmlWebpackPlugin({
-            title: 'Shape Tracker',
+            title: 'SpaceTrader',
             template: './src/index.html',
             inject: 'body'
         })
@@ -49,6 +52,17 @@ module.exports = {
                     'style-loader',
                     'css-loader'
                 ]
+            },
+            {
+                test: /\.(woff|woff2|eot|ttf|otf)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            outputPath: 'assets/fonts',
+                        },
+                    },
+                ],
             }
         ]
     }
